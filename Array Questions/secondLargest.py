@@ -1,4 +1,4 @@
-# you have an array, need to print seconf largest element. 
+# you have an array, need to print second largest element. 
 
 class Solution:
     def secondLargest(self, arr):
