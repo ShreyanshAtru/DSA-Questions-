@@ -10,7 +10,7 @@ first = 0
 second = 0
 profit = 0
 
-for i in range(1,arr):
+for i in range(1,len(arr)):
     if arr[i] > arr[i-1]:
         second = i
     else:
@@ -19,3 +19,23 @@ for i in range(1,arr):
         second = i
 profit += arr[second] - arr[first]
 print(profit)
+
+
+# ============================================//========================================>
+"""
+What if only one transcatio allowed, means we can only buy one day and sell one day, no repeating buy-sell
+"""
+
+minPrice = float('inf') # first we set it positive infinity and will store the least number
+maxPro = 0 # it'll be answer of the max profit we can get
+
+for i in range(len(arr)):
+    minPrice = min(minPrice, arr[i])
+    maxPro = max(maxPro, arr[i]-minPrice)
+print(maxPro)
+
+# GFG
+# https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/buy-stock-2 
+
+# Leetcode 
+# https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
